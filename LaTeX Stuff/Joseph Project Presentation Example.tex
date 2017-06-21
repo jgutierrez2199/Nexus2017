@@ -1,0 +1,63 @@
+\documentclass{beamer}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+
+\usetheme{berkeley}
+
+\title{Spotify Music Library Download}
+\author{Joseph Gutierrez}
+\institute{University of Texas at El Paso}
+
+
+\begin{document}
+	\maketitle
+	
+	\tableofcontents
+	
+	\section{What?}
+		\begin{frame}{Spotify to Local Download Library}
+			\begin{center}
+				\includegraphics[scale = .1]{images/spotify.jpg}
+				\pause
+					$$\Downarrow$$
+				\pause
+				\includegraphics[scale = .2]{images/itunes.jpg}
+			\end{center}
+		\end{frame}
+			
+	\section{Why?}
+		\begin{frame}{Reasons behind spending the time to do this}
+			\begin{itemize}
+				\item \textbf{I dont want to pay money every month}
+				\item No Ads
+				\item Can Play Offline
+				\item Unlimited skips
+			\end{itemize}
+		\end{frame}
+	
+	\section{How?}
+		\begin{frame}{Steps}
+			\begin{enumerate}
+				\item Get list of URLs from Spotify Library
+				\item Use URLs to get a list of song titles and artists
+				\item Use list of titles and artists in conjunction with another web scraper to download the songs off of a site like mp3ify
+				\item (Possibly figure out how to rename the files with a program too? Who Knows?:p)
+			\end{enumerate}
+		\end{frame}
+	
+		\begin{frame}{A note on Web Scrapers}
+			A web scraper is any program that is used to get info off of internet\\
+			There are also forms of web scrapers called web crawlers used to check that links are all working and stuff on big sites. \\
+			These kinds of programs are also the reason that we have captchas
+		\end{frame}
+	
+	\section{Questions?}
+		\begin{frame}{Any questions?}
+			\begin{center}
+				\includegraphics[scale = .3]{images/questions.jpg}
+			\end{center}
+		\end{frame}
+
+	\end{document}
