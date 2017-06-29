@@ -7,7 +7,7 @@ public class kinematics2{
         parameters[] var = new parameters [5];
 /* 0 -> distance, 1 -> time, 2 -> initial velocity, 3 -> final velocity, 4 -> acceleration */
         System.out.println("If the variable is Unknown type U. Only enter 3 variables");
-        
+
         for( int i = 0; i < 5; i ++){
             switch(i){
                 case 0:
@@ -56,7 +56,7 @@ public class kinematics2{
             m7(var[2], var[3], var[4]);
         }
         else{//Not enough info.
-           
+
         }
     }
     //Write method that gets input from user
@@ -64,9 +64,9 @@ public class kinematics2{
         Scanner scnr = new Scanner(System.in);
         String in = scnr.nextLine();
         parameters p = new parameters();
-        
+
         boolean numAccepted = false;
-        
+
         while(!numAccepted){
             try{
                 if(in.charAt(0).isLetter){
@@ -84,62 +84,62 @@ public class kinematics2{
             numAccepted = true;
         }
     }
-    
+
     //Write method that actually solves
     public static void m1 (parameters t, parameters vo, parameters a){
-        double vf = ((vo) + (a*t));
-        double d = (((Math.pow(vf,2)) - (Math.pow(vo,2))) / (2*d));
-        
+        double vf = ((vo.value) + (a*t.value));
+        double d = (((Math.pow(vf,2)) - (Math.pow(vo.value,2))) / (2*d.value));
+
         System.out.println("Final Velocity= " + vf + " m/s");
         System.out.println("Distance= " + d + " m");
     }
-/***********************************************************************/    
+/***********************************************************************/
     public static void m2 (parameters t, parameters vf, parameters a){
-        double vo = ((-vf) + (a*t));
-        double d = (((Math.pow(vf,2)) - (Math.pow(vo,2))) / (2*d));
-        
+        double vo = ((-vf.value) + (a.value*t.value));
+        double d = (((Math.pow(vf.value,2)) - (Math.pow(vo,2))) / (2*a.value));
+
         System.out.println("Initial Velocity= " + vo + " m/s");
         System.out.println("Distance= " + d + " m");
     }
-/***********************************************************************/    
+/***********************************************************************/
     public static void m3 (parameters t, parameters vo, parameters vf){
-        double a = ((vf - vo) / (t));
-        double d = (((Math.pow(vf,2)) - (Math.pow(vo,2))) / (2*d));
-        
+        double a = ((vf.value - vo.value) / (t.value));
+        double d = (((Math.pow(vf.value,2.0)) - (Math.pow(vo.value,2))) / (2*d));
+
         System.out.println("Acceleration= " + a + " m/(s^2)");
         System.out.println("Distance= " + d + " m");
     }
-/***********************************************************************/    
+/***********************************************************************/
     public static void m4 (parameters d, parameters vo, parameters vf){
-        double a = (((Math.pow(vf,2)) - (Math.pow(vo,2))) / (2*d));
-        double t = ((vf - vo) / a);
-        
+        double a = (((Math.pow(vf.value,2)) - (Math.pow(vo.value,2))) / (2*d.value));
+        double t = ((vf.value - vo.value) / a);
+
         System.out.println("Acceleration= " + a + " m/(s^2)");
         System.out.println("Time= " + t + " s");
     }
-/***********************************************************************/    
+/***********************************************************************/
     public static void m5 (parameters d, parameters vf, parameters a){
-        double vo = (Math.sqrt((Math.pow(vf,2)) - (2*a*d)));
-        double t = ((vf - vo) / a);
-        
+        double vo = (Math.sqrt((Math.pow(vf.value,2)) - (2*a.value*d.value)));
+        double t = ((vf.value - vo) / a.value);
+
         System.out.println("Initial Velocity= " + vo + " m/s");
         System.out.println("Time= " + t + " s");
     }
-/***********************************************************************/    
+/***********************************************************************/
     public static void m6 (parameters d, parameters vo, parameters a){
-        double vf = (Math.sqrt((Math.pow(vo,2)) + (2*a*d)));
-        double t = ((vf - vo) / a);
-        
+        double vf = (Math.sqrt((Math.pow(vo.value,2)) + (2*a.value*d.value)));
+        double t = ((vf - vo.value) / a.value);
+
         System.out.println("Final Velocity= " + vf + " m/s");
         System.out.println("Time= " + t + " s");
     }
-/***********************************************************************/    
+/***********************************************************************/
     public static void m7 (parameters vo, parameters vf, parameters a){
-        double t = ((vf - vo) / a);
-        double d = (((Math.pow(vf,2)) - (Math.pow(vo,2))) / (2*d));
-        
+        double t = ((vf.value - vo.value) / a.value);
+        double d = (((Math.pow(vf.value,2)) - (Math.pow(vo.value,2))) / (2*d));
+
         System.out.println("Time= " + t + " s");
         System.out.println("Distance= " + d + " m");
     }
-    
+
 }
