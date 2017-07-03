@@ -53,7 +53,7 @@ public class Graphing{
         System.out.println("Please enter the coeffecient for the " + i + " degree term.");
         coeff[i] = scnr.nextDouble();
       }
-        
+
     }
 
     //Use a switch statement to determine which specific function
@@ -109,46 +109,43 @@ public class Graphing{
         switch(scnr.nextLine().charAt(0)){
           case 'a': case 'A':
             System.out.println("What are the coeff. for a and x in the form");
-            System.out.println("\'a log(x)\'");
+            System.out.println("\'a log(b x)\'");
             System.out.println("Please enter a value for a");
             a = scnr.nextDouble();
-            System.out.println("Please enter a value for x");
+            System.out.println("Please enter a value for b");
             b = scnr.nextDouble();
             //graphlog(a,x);
             break;
           case 'x': case 'X':
             System.out.println("What are the coeff. for a and x in the form");
-            System.out.println("\'a ln(x)\'");
+            System.out.println("\'a ln(b x)\'");
             System.out.println("Please enter a value for a");
             a = scnr.nextDouble();
-            System.out.println("Please enter a value for x");
+            System.out.println("Please enter a value for b");
             b = scnr.nextDouble();
             //graphln(a,x);
     }
         public static void rational(){
         Scanner scnr = new Scanner(System.in);
-        System.out.println("What specific function would you like to graph?");
-        System.out.println("a) numerator");
-        System.out.println("b) denominator");
 
         double a = 1.0;
         double b = 1.0;
+        double c = 1.0;
 
-        switch(scnr.nextLine().charAt(0)){
-          case 'a': case 'A':
-            System.out.println("What are the coeff. for a and b in the form");
-            System.out.println("\'a a1/bx \'");
-            System.out.println("Please enter a value for a");
-            a = scnr.nextDouble();
-            System.out.println("Please enter a value for b");
-            b = scnr.nextDouble();
+        System.out.println("What are the coeff. for a and b in the form");
+        System.out.println("\'a/bx^c \'");
+        System.out.println("Please enter a value for a");
+        a = scnr.nextDouble();
+        System.out.println("Please enter a value for b");
+        b = scnr.nextDouble();
+        System.out.println("Please enter a value for c");
+        c = scnr.nextDouble();
             //graphlog(a,b);
-            break;
-          
+
     //Take in the parameters needed
 
     //Generate Points
-            
-    //Plot it          
+
+    //Plot it
     }
 }
