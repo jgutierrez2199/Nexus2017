@@ -1,0 +1,82 @@
+function f = equation1(x)
+    f = x.^6 - x - 1;
+    
+end
+_________________________________________________________________________
+function df = dev_equation1(x)
+    df = 6*x.^5 -1;
+end
+__________________________________________________________________________
+function Newton_method(f, df, x0, error)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% this is the newton method which finds the solution of the given
+% function.
+%f: the given function to solve
+%dv: the dirivative of the given function f
+%x0: initial condition
+%error: error of approximation
+iter_limit =1000;
+nm_error = 1;
+i = 0;
+while abs(nm_error) > error && i < iter_limit
+   fx0 = f(x0);
+   dfx0 = df(x0);
+   
+   if dfx0 == 0
+      disp('The derivative is zero. Program was stopped') 
+      return
+   end
+   
+   x1 = x0 - (fx0/dfx0);
+   nm_error = x1 - x0;
+   x0 = x1;
+   i = i + 1;
+   
+end
+ 
+if i == iter_limit
+    disp('The limit of iteration was reached.')
+    disp('An accurate root is not guaranteed.')
+else
+    disp('The root is the following: ')
+    root = x0
+end
+    
+    
+end
+__________________________________________________________________________
+function test_Newton_Method()
+    
+    x0 = 1.5;
+    f = @equation4;
+    df = @dev_equation4;
+    error = 1e-12;
+    
+    Newton_method(f, df, x0, error);
+    
+end
+___________________________________________________________________________
+function f = equation2(x)
+    f = x.^2 + 1;
+end
+__________________________________________________________________________
+function df = dev_equation2(x)
+    df = 2*x;
+end
+__________________________________________________________________________
+function f = equation3(x)
+    f = 6*x.^2 - 2*x;
+end
+____________________________________________________________________________
+function df = dev_equation3(x)
+    df = 12*x - 2;
+end
+__________________________________________________________________________
+function f = equation4(x)
+    f = exp(2*x)- 2*x - 1;
+end
+__________________________________________________________________________
+function df = dev_equation4(x)
+    df = 2*exp(2*x)- 2;
+end
+
