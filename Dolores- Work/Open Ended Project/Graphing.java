@@ -155,37 +155,32 @@ public class Graphing{
             //graphlog(a,b);
             break;
             
-      public static void exponential(){
-        Scanner scnr = new Scanner(System.in);
+        public static void exponential(){
         System.out.println("What specific function would you like to graph?");
-        System.out.println("a) e^x(x)");
-        System.out.println("b) zyx(x)");
-
-        double a = 1.0;
-        double b = 1.0;
-        double c = 1.0;
-
-        switch(scnr.nextLine().charAt(0)){
-          case 'a': case 'A':
-            System.out.println("What are the coeff. for a and x in the form");
-            System.out.println("\'a e^x(b x)\'");
-            System.out.println("Please enter a value for a");
-            a = scnr.nextDouble();
-            System.out.println("Please enter a value for b");
-            b = scnr.nextDouble();
-            //graphlog(a,b);
-            break;
-          case 'a': case 'A':
-            System.out.println("What are the coeff. for a and x in the form");
-            System.out.println("\'a zyx(b x)\'");
-            System.out.println("Please enter a value for z");
-            a = scnr.nextDouble();
-            System.out.println("Please enter a value for y");
-            b = scnr.nextDouble();
-            //graphlog(z,y);
-            break;
+        System.out.println("a)n^x");
+        System.out.println("b)e^x");
             
-    }
+        switch(scnr.nextLine()charAt(0)){
+            case 'a': case 'A':
+                System.out.println("What are the parameters a , b and n");
+                System.out.println("of the form an^(bx)");
+                System.out.println("Please enter a value for a");
+                a=scnr.nextDouble();
+                System.out.println("Please enter a value for b");
+                b=scnr.nextDouble();
+                System.out.println("Please enter a value for n");
+                n=scnr.nextDouble();
+            case 'b': case 'B':
+                System.out.println("What are the paramters a , b and e");
+                System.out.println("of the form ae^(bx)");
+                System.out,println("Please enter a value for a");
+                a=scnr.nextDouble();
+                System.out.println("Please enter a value for b");
+                b=scnr.nextDouble();
+                System.out.println("Please enter a value for e");
+                e=scnr.nextDouble();
+        }
+        }
     //Take in the parameters needed
 
     //Generate Points
