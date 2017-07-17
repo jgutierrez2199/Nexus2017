@@ -22,10 +22,10 @@ public class Graphing{
            break;
         case 'd': case'D':
              rational();
-             break;
+           break;
         case 'e': case 'E':
              exponential();
-             break;
+           break;
         default:
             System.out.println("That is not a valid option!");
             break;
