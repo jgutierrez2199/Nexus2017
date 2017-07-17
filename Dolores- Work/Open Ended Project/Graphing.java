@@ -55,19 +55,6 @@ public class Graphing{
       }
         
     }
-    
-    public static void exponential(){
-      System.out.println("What is the z and y of the exponential?");
-      Scanner scnr = new Scanner(System.in);
-      z y = scnr.nextInt();
-      double [] coeff = new double [ z y + 1];
-
-      for(z y i = 0; i < coeff.length; i++){
-        System.out.println("Please enter the value for z y");
-        coeff[i] = scnr.nextDouble();
-      }
-    }
-
     //Use a switch statement to determine which specific function
     public static void trigonometric(){
         Scanner scnr = new Scanner(System.in);
