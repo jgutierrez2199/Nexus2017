@@ -167,7 +167,7 @@ public class Graphing{
                 System.out.println("Please enter a value for e");
                 e=scnr.nextDouble();
         }
-        }
+      }
     //Take in the parameters needed
 
     //Generate Points
