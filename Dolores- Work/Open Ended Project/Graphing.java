@@ -175,6 +175,15 @@ public class Graphing{
             b = scnr.nextDouble();
             //graphlog(a,b);
             break;
+          case 'a': case 'A':
+            System.out.println("What are the coeff. for a and x in the form");
+            System.out.println("\'a zyx(b x)\'");
+            System.out.println("Please enter a value for z");
+            a = scnr.nextDouble();
+            System.out.println("Please enter a value for y");
+            b = scnr.nextDouble();
+            //graphlog(z,y);
+            break;
             
     }
     //Take in the parameters needed
